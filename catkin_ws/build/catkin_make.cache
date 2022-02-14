@@ -1,2 +1,0 @@
-custom_msg:fyp_sim:keyboard_ctrl:movebase:navigation:odometry
--DCATKIN_DEVEL_PREFIX=/home/tharaka/ROS/fyp-real/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tharaka/ROS/fyp-real/catkin_ws/install -G Unix Makefiles
