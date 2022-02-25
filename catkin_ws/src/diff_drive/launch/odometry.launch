@@ -1,0 +1,8 @@
+<launch>
+    <node name="diff_drive_odometry" pkg="diff_drive" type="diff_drive_odometry"
+            output="screen">
+        <rosparam command="load" file="$(find diff_drive)/config/odometry.yaml"/>
+        <!-- <remap from="/cmd_vel" to="/key_vel" /> -->
+    </node>
+    
+</launch>

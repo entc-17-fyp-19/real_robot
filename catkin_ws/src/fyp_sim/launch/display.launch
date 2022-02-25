@@ -4,9 +4,9 @@
     name="robot_description"
     command="$(find xacro)/xacro --inorder '$(find fyp_sim)/urdf/robot.xacro'"/>
 
-  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" output="screen" if="true">
+  <!-- <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" output="screen" if="true">
       <remap from="/joint_states" to="/joint_states"/>
-  </node>
+  </node> -->
 
   <node
     name="robot_state_publisher"
@@ -15,7 +15,7 @@
     output="screen">
   </node>
 
-  <node name="odom_pub" pkg="odometry" type="odom_data_pub"/>
+  <!-- <node name="odom_pub" pkg="odometry" type="odom_data_pub"/> -->
   <!-- <node name="navigate" pkg="navigation" type="navigate"/> -->
   <!-- <node name="rotate_angle_pub" pkg="rotate_base" type="rotate_base_node"/> -->
   <!-- <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"/> -->
