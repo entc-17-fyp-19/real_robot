@@ -1,0 +1,5 @@
+<launch>
+    <node name="goal_points_publisher" pkg="path_plan" type="navigator.py"
+            output="screen">
+    </node>    
+</launch>

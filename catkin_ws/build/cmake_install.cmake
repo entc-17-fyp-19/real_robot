@@ -134,10 +134,12 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/custom_msg/cmake_install.cmake")
   include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/fyp_sim/cmake_install.cmake")
   include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/keyboard_ctrl/cmake_install.cmake")
+  include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/path_plan/cmake_install.cmake")
   include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/diff_drive/cmake_install.cmake")
   include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/movebase/cmake_install.cmake")
   include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/navigation/cmake_install.cmake")
   include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/odometry/cmake_install.cmake")
+  include("/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/visualize/cmake_install.cmake")
 
 endif()
 

@@ -397,7 +397,7 @@ keyboard_ctrl_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/bui
 keyboard_ctrl_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/keyboard_ctrl
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libtf.so
+lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -428,6 +428,12 @@ odometry_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/od
 
 //Value Computed by CMake
 odometry_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/odometry
+
+//Value Computed by CMake
+path_plan_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/path_plan
+
+//Value Computed by CMake
+path_plan_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/path_plan
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
@@ -476,6 +482,15 @@ tf2_ros_DIR:PATH=/opt/ros/melodic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/melodic/share/tf/cmake
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
+
+//Value Computed by CMake
+visualize_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/visualize
+
+//Value Computed by CMake
+visualize_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/visualize
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
@@ -590,7 +605,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

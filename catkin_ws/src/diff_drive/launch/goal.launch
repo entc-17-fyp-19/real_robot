@@ -1,0 +1,7 @@
+<launch>
+    <node name="diff_drive_goal" pkg="diff_drive" type="diff_drive_go_to_goal"
+            output="screen">
+        <rosparam command="load" file="$(find diff_drive)/config/goal.yaml"/>
+    </node>
+    
+</launch>

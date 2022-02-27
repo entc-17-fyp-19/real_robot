@@ -4,10 +4,11 @@
   <include file="$(find fyp_sim)/launch/display.launch"/>
   <include file="$(find diff_drive)/launch/odometry.launch"/>
   <include file="$(find diff_drive)/launch/diff_drive.launch"/>
+  <include file="$(find diff_drive)/launch/goal.launch"/>
+  <include file="$(find path_plan)/launch/points_navigator.launch"/>
+  <include file="$(find visualize)/launch/points_viz.launch"/>
 
   <include file="$(find odometry)/launch/ekf_localization.launch"/>
   <include file="$(find odometry)/launch/navsat_transform.launch" />
-
-
 
 </launch>

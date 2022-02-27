@@ -4,5 +4,5 @@ wheel_separation : 0.51
 
 base_frame_id : "base_footprint"
 
-encoder_min : -2147483648
-encoder_max : 2147483647
+# encoder_min : -2147483648
+# encoder_max : 2147483647
