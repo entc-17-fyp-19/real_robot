@@ -56,3 +56,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/visualize" TYPE PROGRAM FILES "/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/visualize/catkin_generated/installspace/goal_points.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/visualize" TYPE PROGRAM FILES "/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/visualize/catkin_generated/installspace/current_pos.py")
+endif()
+

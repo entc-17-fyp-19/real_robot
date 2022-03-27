@@ -2,6 +2,6 @@
     <node name="diff_drive" pkg="diff_drive" type="diff_drive_controller"
             output="screen">
         <rosparam command="load" file="$(find diff_drive)/config/diff_drive.yaml"/>
-        <!-- <remap from="/cmd_vel" to="/key_vel" /> -->
+        <remap from="/cmd_vel" to="/key_vel" />
     </node>    
 </launch>

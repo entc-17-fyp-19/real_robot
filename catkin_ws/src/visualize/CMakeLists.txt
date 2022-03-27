@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   visualization_msgs
   geometry_msgs
+  nav_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,7 +107,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES visualize
-  CATKIN_DEPENDS roscpp rospy visualization_msgs geometry_msgs
+  CATKIN_DEPENDS roscpp rospy visualization_msgs geometry_msgs nav_msgs
 #  DEPENDS system_lib
 )
 
@@ -162,6 +163,7 @@ include_directories(
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
    src/goal_points.py
+   src/current_pos.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

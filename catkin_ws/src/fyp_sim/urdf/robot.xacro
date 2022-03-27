@@ -31,7 +31,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://fyp_sim/meshes/chassis.stl" scale="0.01 0.01 0.01" />
+          filename="package://fyp_sim/meshes/chassis.stl" scale="1 1 1" />
       </geometry>
       <material
         name="chassis_material">
@@ -45,7 +45,7 @@
         rpy="0 0 ${-pi/2}" />
       <geometry>
         <mesh
-          filename="package://fyp_sim/meshes/chassis.stl" scale="0.01 0.01 0.01" />
+          filename="package://fyp_sim/meshes/chassis.stl" scale="1 1 1" />
       </geometry>
     </collision>
   </link>
@@ -415,12 +415,29 @@
     </collision>
   </link>
 
+ <link name="imu_link">
+   <inertial>
+     <origin xyz="0 0 0" rpy="0 0 0"/>
+     <mass value="1"/>
+     <inertia ixx="100"  ixy="0"  ixz="0" iyy="100" iyz="0" izz="100" />
+   </inertial>
+
+   <visual>
+     <origin xyz="0 0 0" rpy="0 0 0" />
+     <geometry>
+       <box size="0.01 0.02 0.005" />
+     </geometry>
+     <material name="Cyan">
+       <color rgba="0 1.0 1.0 1.0"/>
+     </material>
+   </visual>
+ </link>
 
 
 
   <joint name="base_joint" type="fixed">
     <origin
-      xyz="0 0 0.22987"
+      xyz="0 0 0.25"
       rpy="0 0 0" />
 
     <parent
@@ -429,11 +446,22 @@
       link="chassis" />
   </joint>
 
+  <joint name="imu_joint" type="fixed">
+    <origin
+      xyz="0 0 0.42"
+      rpy="0 0 0" />
+
+    <parent
+      link="base_footprint" />
+    <child
+      link="imu_link" />
+  </joint>
+
 
   <joint name="front_RW_joint"
     type="continuous">
     <origin
-      xyz="0.23591 -0.245 -0.06987"
+      xyz="0.301 -0.245 -0.09"
       rpy="${pi/2} 0 0" />
     <parent
       link="chassis" />
@@ -447,7 +475,7 @@
   <joint name="front_LW_joint"
     type="continuous">
     <origin
-      xyz="0.23591 0.245 -0.06987"
+      xyz="0.301 0.245 -0.09"
       rpy="${-pi/2} 0 0" />
     <parent
       link="chassis" />
@@ -462,7 +490,7 @@
     type="fixed">
     <!-- <limit effort="30" velocity="${pi/3}" lower="${-pi/2}" upper="${pi/2}"/> -->
     <origin
-      xyz="-0.35409 -0.22 -0.03"
+      xyz="-0.289 -0.22 -0.035"
       rpy="0 0 0" />
     <parent
       link="chassis" />
@@ -492,7 +520,7 @@
     type="fixed">
     <!-- <limit effort="30" velocity="${pi/3}" lower="${-pi/2}" upper="${pi/2}"/> -->
     <origin
-      xyz="-0.35409 0.22 -0.03"
+      xyz="-0.289 0.22 -0.035"
       rpy="0 0 0" />
     <parent
       link="chassis" />

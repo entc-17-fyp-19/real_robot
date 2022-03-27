@@ -30,6 +30,7 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
+    args="-d $(find fyp_sim)/config/rviz_config.rviz"
 
     />
 </launch>

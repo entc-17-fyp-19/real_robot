@@ -1,0 +1,8 @@
+prefix=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/install
+
+Name: reach_rs_driver
+Description: Description of reach_rs_driver
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

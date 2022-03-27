@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/fyp-19/fyp-real-bot/ros_part/catkin_ws/install/lib;/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/fyp-19/fyp-real-bot/ros_part/catkin_ws/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${visualize_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;rospy;visualization_msgs;geometry_msgs")
+set(depends "roscpp;rospy;visualization_msgs;geometry_msgs;nav_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

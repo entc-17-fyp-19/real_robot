@@ -308,6 +308,9 @@ custom_msg_DIR:PATH=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/devel/share/cus
 //Value Computed by CMake
 custom_msg_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/custom_msg
 
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/melodic/share/cv_bridge/cmake
+
 //Value Computed by CMake
 diff_drive_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/diff_drive
 
@@ -414,6 +417,12 @@ movebase_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/mo
 //Value Computed by CMake
 movebase_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/movebase
 
+//Value Computed by CMake
+mpu_6050_driver_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/mpu_6050_driver
+
+//Value Computed by CMake
+mpu_6050_driver_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/mpu_6050_driver
+
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
 
@@ -434,6 +443,12 @@ path_plan_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/p
 
 //Value Computed by CMake
 path_plan_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/path_plan
+
+//Value Computed by CMake
+reach_rs_driver_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/reach_rs_ros_driver
+
+//Value Computed by CMake
+reach_rs_driver_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/reach_rs_ros_driver
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
@@ -482,6 +497,12 @@ tf2_ros_DIR:PATH=/opt/ros/melodic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/melodic/share/tf/cmake
+
+//Value Computed by CMake
+vision_BINARY_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build/vision
+
+//Value Computed by CMake
+vision_SOURCE_DIR:STATIC=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/src/vision
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
@@ -605,7 +626,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
