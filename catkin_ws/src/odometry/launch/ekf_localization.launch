@@ -1,8 +1,12 @@
 <launch>
 
     <!-- Run the EKF Localization node -->
-    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
-        <rosparam command="load" file="$(find odometry)/config/ekf_localization.yaml"/>
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_local">
+        <rosparam command="load" file="$(find odometry)/config/ekf_local.yaml"/>
     </node>
+
+    <!-- <node pkg="robot_localization" type="ekf_localization_node" name="ekf_global">
+        <rosparam command="load" file="$(find odometry)/config/ekf_global.yaml"/>
+    </node> -->
 
 </launch>

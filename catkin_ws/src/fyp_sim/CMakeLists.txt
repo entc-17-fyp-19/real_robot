@@ -11,6 +11,15 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
 )
 
+# rosserial_generate_ros_lib(
+#   PACKAGE rosserial_arduino
+#   SCRIPT make_libraries.py
+# )
+
+# rosserial_configure_client(
+#   DIRECTORY firmware
+#   TOOLCHAIN_FILE ${ROSSERIAL_ARDUINO_TOOLCHAIN}
+# )
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 

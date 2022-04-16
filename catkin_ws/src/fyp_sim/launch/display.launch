@@ -24,7 +24,7 @@
   <!-- <node name="rotate_angle_pub" pkg="rotate_base" type="rotate_base_node"/> -->
   <!-- <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"/> -->
   <!-- <node name="teleop_ctrl" pkg="keyboard_ctrl" type="keyboard_ctrl_node"/> -->
-  <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0 0 0 0 0 0 map odom 30"/>
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0 0 0 0 0 0 map odom 100"/>
 
   <node
     name="rviz"

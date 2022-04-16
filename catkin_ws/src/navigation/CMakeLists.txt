@@ -10,6 +10,10 @@ project(navigation)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   custom_msg
+  geometry_msgs
+  nav_msgs
+  sensor_msgs
+  rospy
 )
 
 ## System dependencies are found with CMake's conventions
@@ -148,12 +152,6 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-
-add_executable(navigate src/navigate.cpp)
-add_dependencies(navigate ${navigate_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(navigate
-  ${catkin_LIBRARIES}
-)
 
 
 #############

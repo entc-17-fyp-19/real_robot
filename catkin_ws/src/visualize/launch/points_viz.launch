@@ -1,8 +1,0 @@
-<launch>
-    <node name="points_visualizer_rviz" pkg="visualize" type="goal_points.py"
-            output="screen">
-    </node>
-    <!-- <node name="current_pos_visualizer_rviz" pkg="visualize" type="current_pos.py"
-            output="screen">
-    </node>     -->
-</launch>

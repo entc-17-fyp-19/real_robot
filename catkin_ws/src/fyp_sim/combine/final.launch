@@ -4,12 +4,19 @@
   <include file="$(find fyp_sim)/launch/display.launch"/>
   <include file="$(find diff_drive)/launch/odometry.launch"/>
   <include file="$(find diff_drive)/launch/diff_drive.launch"/>
-  <include file="$(find mpu_6050_driver)/launch/imu_demo.launch"/>
+  <!-- <include file="$(find mpu_6050_driver)/launch/imu_demo.launch"/> -->
   <!-- <include file="$(find diff_drive)/launch/goal.launch"/> -->
-  <!-- <include file="$(find path_plan)/launch/points_navigator.launch"/> -->
+  
+  <!-- <include file="$(find navigation)/launch/navigation_algo.launch"/> -->
   <!-- <include file="$(find visualize)/launch/points_viz.launch"/> -->
 
-  <include file="$(find odometry)/launch/ekf_localization.launch"/>
+
+  <!-- <include file="$(find odometry)/launch/ekf_localization.launch"/> -->
   <!-- <include file="$(find odometry)/launch/navsat_transform.launch" /> -->
+
+  <node name="serial_node" pkg="rosserial_python" type="serial_node.py" output="screen">
+    <param name="~port" value="/dev/ttyACM0"/>
+    <param name="~baud" value="115200"/>
+  </node>
 
 </launch>

@@ -1,8 +1,0 @@
-prefix=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/devel
-
-Name: movebase
-Description: Description of movebase
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,0 +1,10 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<launch>
+    <node name="navigation_algo" pkg="navigation" type="navigation_algo.py"
+            output="screen">
+    </node>
+
+    <node name="process_data" pkg="navigation" type="process_data.py"
+            output="screen">
+    </node>
+</launch>

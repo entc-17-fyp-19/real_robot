@@ -68,17 +68,26 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target test
 test:
@@ -91,15 +100,17 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -111,17 +122,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -167,48 +167,6 @@ depend:
 	cd /home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-navigation/CMakeFiles/navigate.dir/rule:
-	cd /home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigate.dir/rule
-.PHONY : navigation/CMakeFiles/navigate.dir/rule
-
-# Convenience name for target.
-navigate: navigation/CMakeFiles/navigate.dir/rule
-
-.PHONY : navigate
-
-# fast build rule for target.
-navigate/fast:
-	cd /home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigate.dir/build.make navigation/CMakeFiles/navigate.dir/build
-.PHONY : navigate/fast
-
-src/navigate.o: src/navigate.cpp.o
-
-.PHONY : src/navigate.o
-
-# target to build an object file
-src/navigate.cpp.o:
-	cd /home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigate.dir/build.make navigation/CMakeFiles/navigate.dir/src/navigate.cpp.o
-.PHONY : src/navigate.cpp.o
-
-src/navigate.i: src/navigate.cpp.i
-
-.PHONY : src/navigate.i
-
-# target to preprocess a source file
-src/navigate.cpp.i:
-	cd /home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigate.dir/build.make navigation/CMakeFiles/navigate.dir/src/navigate.cpp.i
-.PHONY : src/navigate.cpp.i
-
-src/navigate.s: src/navigate.cpp.s
-
-.PHONY : src/navigate.s
-
-# target to generate assembly for a file
-src/navigate.cpp.s:
-	cd /home/fyp-19/fyp-real-bot/ros_part/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigate.dir/build.make navigation/CMakeFiles/navigate.dir/src/navigate.cpp.s
-.PHONY : src/navigate.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,16 +174,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... test"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... navigate"
+	@echo "... list_install_components"
+	@echo "... test"
+	@echo "... install/local"
+	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... src/navigate.o"
-	@echo "... src/navigate.i"
-	@echo "... src/navigate.s"
 .PHONY : help
 
 

@@ -1,2 +1,2 @@
-custom_msg:diff_drive:fyp_sim:keyboard_ctrl:movebase:mpu_6050_driver:navigation:odometry:path_plan:reach_rs_ros_driver:vision:visualize
+custom_msg:diff_drive:fyp_sim:mpu_6050_driver:navigation:odometry:reach_rs_ros_driver:vision
 -DCATKIN_DEVEL_PREFIX=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/fyp-19/fyp-real-bot/ros_part/catkin_ws/install -G Unix Makefiles
